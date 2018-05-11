@@ -583,9 +583,72 @@ RealtimeController::processRealtimeData(RealtimeData &rtData)
         rtData.setWatts(13.09580164 * v - 85.38477516);
         }
         break;
+    
+    case 66 : // ELITE NOVO FORCE LEVEL 1
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -0,0411 + 1,94x + 0,0566x^2 + 6,82E-05x^3 + -2,65E-06x^4
+       rtData.setWatts(-0.0411 + 1.94*V + 0.0566*pow(V,2) + 0.0000682*pow(V, 3) + -0.00000265*pow(V, 4));
+       }
+       break;
+	   
+    case 67 : // ELITE NOVO FORCE LEVEL 2
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -0,0465 + 2,76x + 0,079x^2 + -4,42E-05x^3 + 1,14E-06x^4
+       rtData.setWatts(-0.0465 + 2.76*V + 0.079*pow(V,2) + -0.000442*pow(V, 3) + 0.00000114*pow(V, 4));
+       }
+       break;
+	   
+    case 68 : // ELITE NOVO FORCE LEVEL 3
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -0,182 + 3,18x + 0,134x^2 + -1,27E-03x^3 + 3,41E-06x^4
+       rtData.setWatts(-0.182 + 3.18*V + 0.134*pow(V,2) + -0.00127*pow(V, 3) + 0.00000341*pow(V, 4));
+       }
+       break;
+	   
+    case 69 : // ELITE NOVO FORCE LEVEL 4
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -0,316 + 3,74x + 0,221x^2 + -3,1E-03x^3 + 1,52E-05x^4
+       rtData.setWatts(-0.316 + 3.74*V + 0.221*pow(V,2) + -0.0031*pow(V, 3) + 0.0000152*pow(V, 4));
+       }
+       break;
+	   
+    case 70 : // ELITE NOVO FORCE LEVEL 5
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -0,0952 + 3,06x + 0,44x^2 + -8,86E-03x^3 + 6,25E-05x^4
+       rtData.setWatts(-0.0952 + 3.06*V + 0.44*pow(V,2) + -0.00886*pow(V, 3) + 0.0000625*pow(V, 4));
+       }
+       break;
 
+    case 71 : // ELITE NOVO FORCE LEVEL 6
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = 0,535 + 3,98x + 0,494x^2 + -9,47E-03x^3 + 6,36E-05x^4
+       rtData.setWatts(-0.535 + 3.98*V + 0.494*pow(V,2) + -0.00947*pow(V, 3) + 0.0000636*pow(V, 4));
+       }
+       break;	
+
+    case 72 : // ELITE NOVO FORCE LEVEL 7
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -1,03 + 4,89x + 0,64x^2 + -1,35E-02x^3 + 9,81E-05x^4
+       rtData.setWatts(-1.03 + 4.89*V + 0.64*pow(V,2) + -0.0135*pow(V, 3) + 0.0000981*pow(V, 4));
+       }
+       break;	   
+	   
+    case 73 : // ELITE NOVO FORCE LEVEL 8
+       {
+       double V = rtData.getSpeed() * MILES_PER_KM;
+       // f(x) = -1,02 + 6,14x + 0,654x^2 + -1,27E-02x^3 + 8,48E-05x^4
+       rtData.setWatts(-1.02 + 6.14*V + 0.654*pow(V,2) + -0.0127*pow(V, 3) + 0.0000848*pow(V, 4));
+       }
+       break;	               
     default : // unknown - do nothing
-        break;
+        break;    
     }
 }
 
