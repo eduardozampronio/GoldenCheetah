@@ -1271,6 +1271,14 @@ AddFinal::AddFinal(AddDeviceWizard *parent) : QWizardPage(parent), wizard(parent
     virtualPower->addItem(tr("Power - Tacx Sirius (8)"));                                   // 63
     virtualPower->addItem(tr("Power - Tacx Sirius (9)"));                                   // 64
     virtualPower->addItem(tr("Power - Tacx Sirius (10)"));                                  // 65
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (1)"));                        // 66
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (2)"));                        // 67
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (3)"));                        // 68
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (4)"));                        // 69
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (5)"));                        // 70
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (6)"));                        // 71
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (7)"));                        // 72
+    virtualPower->addItem(tr("Power - ELITE NOVO FORCE LEVEL (8)"));                        // 73
 
     //
     // Wheel size
